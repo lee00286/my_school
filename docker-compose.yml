@@ -1,0 +1,38 @@
+version: "3.5"
+
+services:
+  db:
+    image: postgres:12
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    env_file:
+      - .env/development/db
+
+  webpack:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3035:3035
+    command: ./bin/webpack-dev-server --inline true
+    env_file:
+      - .env/development/web
+
+  web:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
+      - webpack
+    env_file:
+      - .env/development/db
+      - .env/development/web
+
+volumes:
+  db_data:
+  webpack:
