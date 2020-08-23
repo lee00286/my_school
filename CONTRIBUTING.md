@@ -38,6 +38,22 @@ Use `git` to clone the fork. Make sure to replace `YOUR-USERNAME` with your GitH
 $ git clone https://github.com/YOUR-USERNAME/my_school
 ```
 
+### Create the Branch
+
+[Creating a Branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository) allows you to isolate edits without affecting the other branches in the repository.
+
+Create a branch with your username and [Issue ID](https://github.com/JuanVqz/my_school/issues). Don't forget to replace `YOUR-USERNAME` and `ISSUE-TITLE-ISSUEID`.
+
+```
+$ git checkout -b YOUR-USERNAME/ISSUE-TITLE-ISSUEID
+```
+
+For example,
+
+```
+$ git checkout -b JuanVqz/improve-contribution-file-1234
+```
+
 ## How to Contribute
 
 You are now ready for the contribution! Feel free to make changes in your fork of this project.
@@ -51,3 +67,5 @@ After you've made any changes, you need to [create a pull request from a fork](h
 1. In the **base repository** drop-down menu, select `JuanVqz/my_school`
 1. In the **head repository** drop-down menu, select your fork `YOUR-USERNAME/my_school`
 1. Click **Create Pull Request**
+
+If you are planning to do further work after the pull request, please use [Draft Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) feature.
