@@ -1,4 +1,6 @@
-# My School
+# My Virtual School
+
+[![Build Status](https://travis-ci.com/JuanVqz/my_school.svg?branch=master)](https://travis-ci.com/JuanVqz/my_school)
 
 This is a virtual school where we will have teachers, classrooms, students, and more...
 
