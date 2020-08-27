@@ -8,49 +8,52 @@ This is a virtual school where we will have teachers, classrooms, students, and 
 
 - Clone the repository.
 
-```sh
-git clone https://github.com/JuanVqz/my_school.git
-```
+  ```sh
+  git clone https://github.com/JuanVqz/my_school.git
+  ```
 
 - Set the environment variables.
 
-you can change the value but it is not required
+  you can change the value but it is not required
 
-```sh
-cp .env/development/db.example .env/development/db
+  ```sh
+  cp .env/development/db.example .env/development/db
 
-cp .env/development/web.example .env/development/web
-```
+  cp .env/development/web.example .env/development/web
+  ```
 
 - Creates my school image.
 
-```sh
-docker-compose build
-```
+  ```sh
+  docker-compose build
+  ```
 
 - Install javascript dependencies
 
-```sh
-docker run -it --rm -v ${PWD}:/usr/src/app my_school_web sh
-```
+  ```sh
+  docker run -it --rm -v ${PWD}:/usr/src/app my_school_web sh
+  ```
 
 - Onces inside the container execute the following command.
 
-```sh
-yarn install
-```
+  ```sh
+  yarn install
+  ```
+  then `ctrl+c` to stop the container.
+
+- Start the application as daemon
+
+  ```sh
+  docker-compose up -d
+  ```
 
 - Create the development and test database
 
-```sh
-docker-compose exec web rails db:create
-```
+  ```sh
+  docker-compose exec web rails db:create
+  ```
 
-- Run the server.
-
-```sh
-docker-compose up -d
-```
+- Enjoy!
 
 ## Testing
 
