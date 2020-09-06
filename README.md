@@ -4,6 +4,17 @@
 
 This is a virtual school where we will have teachers, classrooms, students, and more...
 
+## Requirements
+
+### System
+
+- Install ruby, We recommend install [rvm](https://rvm.io/).
+- Install [postgresql](https://www.postgresql.org/download/)
+
+### Docker
+
+- Install [docker](https://docs.docker.com/get-docker/)
+
 ## Installation
 
 - Clone the repository.
@@ -11,6 +22,17 @@ This is a virtual school where we will have teachers, classrooms, students, and 
   ```sh
   git clone https://github.com/JuanVqz/my_school.git
   ```
+
+## System
+
+- Install gems
+
+```sh
+cd my_school
+bundle install
+```
+
+## Docker
 
 - Set the environment variables.
 
@@ -39,6 +61,7 @@ This is a virtual school where we will have teachers, classrooms, students, and 
   ```sh
   yarn install
   ```
+
   then `ctrl+c` to stop the container.
 
 - Start the application as daemon
@@ -57,7 +80,29 @@ This is a virtual school where we will have teachers, classrooms, students, and 
 
 ## Testing
 
-- Run all rspec test.
+### System
+
+- run all rspec test.
+
+```sh
+rspec
+```
+
+- Run a specific rspec test file.
+
+```sh
+rspec spec/models/user.rb
+```
+
+- Run a specific line rspec test.
+
+```sh
+rspec spec/models/user.rb:10
+```
+
+### Docker
+
+- run all rspec test.
 
 ```sh
 docker-compose exec web rspec

@@ -19,6 +19,7 @@ gem "webpacker", "~> 4.0"
 group :development, :test do
   gem "bullet"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "capybara"
   gem "factory_bot_rails"
   gem "pry"
   gem "rspec-rails"
@@ -26,6 +27,7 @@ group :development, :test do
   gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
   gem "shoulda-matchers", "~> 4.0"
+  gem "webdrivers", "~> 4.0"
 end
 
 group :development do
