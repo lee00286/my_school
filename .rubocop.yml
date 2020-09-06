@@ -2,9 +2,18 @@ require:
   - rubocop-rails
   - rubocop-rspec
 
+AllCops:
+  NewCops: enable
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  TargetRubyVersion: 2.7
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+
 Bundler/OrderedGems:
   Description: >-
-                 Gems within groups in the Gemfile should be alphabetically sorted.
+    Gems within groups in the Gemfile should be alphabetically sorted.
   Enabled: true
   ConsiderPunctuation: true
 
@@ -29,4 +38,5 @@ Metrics/BlockLength:
   Enabled: true
   Exclude:
     - "config/environments/development.rb"
+    - "config/initializers/simple_form_bulma.rb"
 
